@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Classroom Vigilance</title>
+    <style>
+        body {
+            font-family: 'Helvetica', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header.feature-box.right {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: right;
+        }
+
+        header.feature-box.below {
+            height: 400px;
+            background-color: #3498db;
+            background-image: url("https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-06/computer-vision-companies.png");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            background-color: #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        li:hover {
+            background-color: #555;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .details {
+            height: 100px;
+            margin: 10px;
+            padding: 0px;
+            font-size: 36px;
+            background-image: linear-gradient(to right, #7d2774, rgba(255,0,0,0));
+            text-align: left;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .details h1 {
+            padding: 15px;
+        }
+
+        .features {
+            background: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .features figure {
+            width: 300px;
+            margin: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .features figure img {
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        div.main {
+            display: flex;
+            flex-direction: column;
+            margin: 40px;
+        }
+
+        .subpart1, .subpart2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .subpart2 figure img {
+            border-radius: 4%;
+            width: 100%;
+        }
+
+        .contactpage {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #textbox, #textboxes {
+            font-size: 18pt;
+            height: 42px;
+            width: 80%;
+            margin-bottom: 20px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2a7fbd;
+        }
+
+        footer {
+            background-color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 20px 0;
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<header class="feature-box right">
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/reports">Reports</a></li>
+            <li><a href="/webcam">Live Webcam</a></li>
+        </ul>
+    </nav>
+</header>
+
+<header class="feature-box below">
+</header>
+
+<section class="details">
+    <h1>CLASSROOM VIGILANCE</h1>
+</section>
+
+<section class="features">
+    <figure>
+        <img src="../static/images/test.jpg" alt="YOLOv8 Results 1">
+        <figcaption>Sample Input</figcaption>
+    </figure>
+    <!-- Add more figures as needed -->
+</section>
+
+<div class="main">
+    <div class="subpart1">
+        <h1>Classroom Vigilance - Drowsiness Detection using YOLOv8</h1>
+        <h4>FPS of Video</h4>
+        <p>FPS represents the Frame Rate. In case of GPU, the FPS will be high, while in case of CPU, the FPS will be low.</p>
+        <!-- Add more content as needed -->
+    </div>
+
+    <div class="subpart2">
+        <figure>
+            <img src="../static/images/1.jpg" alt="Image Missing">
+            <figcaption>Sample Results</figcaption>
+        </figure>
+    </div>
+</div>
+
+<div class="contactpage">
+    <h1>Contact</h1>
+    <p>In case of any query, please let me know</p>
+    <form action="/action_page.php" target="_blank">
+        <p><input type="text" placeholder="Name" required name="Name" id="textbox"></p>
+        <p><input type="text" placeholder="Email ID" required name="Email ID" id="textboxes"></p>
+        <p><button type="submit">SEND MESSAGE</button></p>
+    </form>
+</div>
+
+<footer>
+    <p>Specialization Project &copy 2023</p>
+</footer>
+</body>
+</html>

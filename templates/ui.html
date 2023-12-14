@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+    <style>
+        body {
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header.feature-box.top {
+            background-color: #333;
+            height: 100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header.feature-box.second {
+            background-color: #3498db;
+            height: 50px;
+            text-align: center;
+            margin-top: -25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .features, section.col-sm {
+            background-color: #333;
+            width: 80%;
+            max-width: 900px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: contain;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        .new {
+            color: white;
+            margin: 0;
+            padding: 10px;
+            background-color: #27ae60;
+            margin: 0;
+            margin-top: -10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header class="feature-box top">
+    <h1><strong>Classroom Vigilance - Drowsiness Detection using YOLOv8</strong></h1>
+</header>
+<header class="feature-box second">
+    <h1><strong>Output Video</strong></h1>
+</header>
+
+<section class="col-sm">
+    <img src="{{ url_for('webapp') }}" alt="Upload video">
+</section>
+
+<div class="new">
+    <p>Explore the Drowsiness Detection Results</p>
+</div>
+
+</body>
+</html>

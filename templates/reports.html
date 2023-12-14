@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Reports</title>
+</head>
+<body>
+    <h1>Detection Reports</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Session ID</th>
+                <th>Detection Time</th>
+                <th>Detected Class</th>
+                <th>Confidence</th>
+                <th>Number of Detections</th>
+            </tr>
+        </thead>
+            <tbody>
+                {% for report in reports %}
+                    <tr>
+                        <td>{{ report.session_id }}</td>
+                        <td>{{ report.detection_time }}</td>
+                        <td>{{ report.detected_class }}</td>
+                        <td>{{ report.confidence }}</td>
+                        <td>{{ report.number_of_detections }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+</body>
+</html>

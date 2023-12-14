@@ -5,149 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Classroom Vigilance</title>
-    <style>
-        body {
-            font-family: 'Helvetica', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header.feature-box.right {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            text-align: right;
-        }
-
-        header.feature-box.below {
-            height: 400px;
-            background-color: #3498db;
-            background-image: url("https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-06/computer-vision-companies.png");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            display: inline-block;
-            background-color: #333;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        li:hover {
-            background-color: #555;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .details {
-            height: 100px;
-            margin: 10px;
-            padding: 0px;
-            font-size: 36px;
-            background-image: linear-gradient(to right, #7d2774, rgba(255,0,0,0));
-            text-align: left;
-            color: white;
-            border-radius: 20px;
-        }
-
-        .details h1 {
-            padding: 15px;
-        }
-
-        .features {
-            background: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .features figure {
-            width: 300px;
-            margin: 20px;
-            text-align: center;
-            text-transform: uppercase;
-        }
-
-        .features figure img {
-            border-radius: 10px;
-            width: 100%;
-        }
-
-        div.main {
-            display: flex;
-            flex-direction: column;
-            margin: 40px;
-        }
-
-        .subpart1, .subpart2 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .subpart2 figure img {
-            border-radius: 4%;
-            width: 100%;
-        }
-
-        .contactpage {
-            margin: 20px;
-            text-align: center;
-        }
-
-        #textbox, #textboxes {
-            font-size: 18pt;
-            height: 42px;
-            width: 80%;
-            margin-bottom: 20px;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #2a7fbd;
-        }
-
-        footer {
-            background-color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 20px 0;
-            color: white;
-            font-size: 18px;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
 <header class="feature-box right">
     <nav>
+        <a href="/home"><img src="/static/images/logo.png" alt="Logo" class="logo"></a>
+        
         <ul>
             <li><a href="/home">Home</a></li>
             <li><a href="/reports">Reports</a></li>
-            <li><a href="/webcam">Live Webcam</a></li>
+            <li><a href="/webcam">Monitor</a></li>
         </ul>
     </nav>
 </header>
@@ -181,20 +49,24 @@
             <figcaption>Sample Results</figcaption>
         </figure>
     </div>
+    <div class="about-section">
+        <h2>About Classroom Vigilance</h2>
+        <p>Welcome to Classroom Vigilance, a web application designed for monitoring classrooms and ensuring a secure and attentive learning environment. Our system utilizes YOLOv8 for drowsiness detection, helping educators and administrators maintain classroom safety.</p>
+        <p>Explore the features, view reports, and monitor classrooms seamlessly through our user-friendly interface.</p>
+    </div>
 </div>
 
 <div class="contactpage">
-    <h1>Contact</h1>
-    <p>In case of any query, please let me know</p>
-    <form action="/action_page.php" target="_blank">
-        <p><input type="text" placeholder="Name" required name="Name" id="textbox"></p>
-        <p><input type="text" placeholder="Email ID" required name="Email ID" id="textboxes"></p>
-        <p><button type="submit">SEND MESSAGE</button></p>
-    </form>
+    <h1>Contact Us</h1>
+    <div class="social-links">
+        <a href="https://github.com/rish4522" target="_blank"><img src="/static/images/2056021.png" alt="GitHub" height="40px" width="40px"></a>
+        <a href="https://www.linkedin.com/in/rishabh-t-b7156b90/" target="_blank"><img src="/static/images/linkedin-icon.png" alt="LinkedIn" height="40px" width="40px"></a>
+    </div>
 </div>
 
 <footer>
-    <p>Specialization Project &copy 2023</p>
+    <img src="/static/images/logo.png" alt="Logo" class="footer-logo">
+    <p>Specialization Project &copy; 2023</p>
 </footer>
 </body>
 </html>

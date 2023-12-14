@@ -1,0 +1,200 @@
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header.feature-box.right {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: left; /* Changed from "right" to "left" */
+    display: flex;
+    justify-content: space-between; /* Align items to the right end */
+    align-items: center; /* Center vertically */
+}
+
+header.feature-box.below {
+    height: 400px;
+    background-color: #3498db;
+    background-image: url("https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-06/computer-vision-companies.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-left: 50rem;
+}
+
+li {
+    display: inline-block;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+li:hover {
+    background-color: #555;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 350px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+.details {
+    height: 100px;
+    margin: 10px;
+    padding: 0px;
+    font-size: 36px;
+    background-image: linear-gradient(to right, #7d2774, rgba(255,0,0,0));
+    text-align: left;
+    color: white;
+    border-radius: 20px;
+}
+
+.details h1 {
+    padding: 15px;
+}
+
+.features {
+    background: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.features figure {
+    width: 600px;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.features figure figcaption {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+.features figure img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+div.main {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.subpart1, .subpart2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.subpart2 figure img {
+    border-radius: 4%;
+    width: 100%;
+}
+
+.subpart2 figure figcaption {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+}
+
+.contactpage {
+    margin: 20px;
+    text-align: center;
+}
+
+#textbox, #textboxes {
+    font-size: 18pt;
+    height: 42px;
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2a7fbd;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+    font-size: 18px;
+    /* display: flex; */
+    align-items: center; /* Center vertically */
+}
+
+.footer-logo {
+    width: 400px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+    
+}
+
+.about-section {
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.about-section h2 {
+    color: #333;
+}
+
+.about-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    header.feature-box.right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    .features figure {
+        width: 100%;
+    }
+}

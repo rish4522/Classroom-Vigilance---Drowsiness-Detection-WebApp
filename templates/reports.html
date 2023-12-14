@@ -2,9 +2,22 @@
 <html>
 <head>
     <title>Detection Reports</title>
+    <link rel="stylesheet" href="/static/reportStyle.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-    <h1>Detection Reports</h1>
+    <header class="feature-box right">
+        <nav>
+            <a href="/home"><img src="/static/images/logo.png" alt="Logo" class="logo"></a>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/reports">Reports</a></li>
+                <li><a href="/webcam">Monitor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 style="text-align: center;">Detection Report</h1>
+    <div style="background-color: rgb(227, 223, 223); height: 30px;"></div>
     <table border="1">
         <thead>
             <tr>
@@ -27,5 +40,93 @@
                 {% endfor %}
             </tbody>
     </table>
+        <h1 style="text-align: center; background-color: white; padding: 30px;">Report Analysis</h1>
+    <div id="session_analysis" style="width: 100%; height: 500px;"></div>
+    <br>
+    <div id="time_based_analysis" style="width: 100%; height: 500px;"></div>
+    <br>
+    <div id="session_comparison" style="width: 100%; height: 500px;"></div>
+
+    <footer>
+        <img src="/static/images/logo.png" alt="Logo" class="footer-logo">
+        <p>Specialization Project &copy; 2023</p>
+    </footer>
+
+    <script>
+        function getHour(detection_time) {
+            let date = new Date(detection_time);
+            return date.getHours();
+        }
+
+        function getAverageConfidence(confidenceValues) {
+            let total = confidenceValues.reduce((a, b) => a + b, 0);
+            return total / confidenceValues.length;
+        }
+
+        window.onload = function() {
+            var sessionIds = [];
+            var detection_times = [];
+            var confidenceValues = [];
+            // var durations = [];
+            var number_of_detections = [];
+            var detected_classes = [];
+
+            {% for report in reports %}
+                sessionIds.push("{{ report.session_id }}");
+                detection_times.push("{{ report.detection_time }}");
+                confidenceValues.push({{ report.confidence }});
+                // durations.push({{ report.duration }});
+                number_of_detections.push({{ report.number_of_detections }});
+                detected_classes.push("{{ report.detected_class }}");
+            {% endfor %}
+
+            // Session-wise Analysis
+            var trace1 = {
+                x: sessionIds,
+                y: confidenceValues,
+                name: 'Confidence',
+                type: 'histogram'
+
+            };
+
+            var trace2 = {
+                x: sessionIds,
+                y: number_of_detections,
+                name: 'Number of Detections',
+                type: 'line'
+            };
+
+            var data = [trace1, trace2];
+            
+            var layout = {title: 'Detections over Confidence per Session',xaxis: { title: 'Session IDs' }, yaxis: { title: 'Number of Detections' }, barmode: 'group'};
+            Plotly.newPlot('session_analysis', data, layout);
+
+            // Time-based Analysis
+            var hours = detection_times.map(getHour);
+            var trace3 = {
+                x: hours,
+                y: number_of_detections,
+                mode: 'lines+markers',
+                name: 'Detections'
+            };
+
+            var data2 = [trace3];
+            var layout2 = {title: 'Number of Detections Over Time', xaxis: { title: 'Hours' }, yaxis: { title: 'Number of Detections'}, barmode: 'group'};
+            Plotly.newPlot('time_based_analysis', data2, layout2);
+
+            // Session Comparison
+            var averageConfidences = confidenceValues.map(getAverageConfidence);
+            var trace4 = {
+                x: sessionIds,
+                y: averageConfidences,
+                mode: 'lines+markers',
+                name: 'Average Confidence'
+            };
+
+            var data3 = [trace4];
+            var layout3 = {title: 'Session Comparison'};
+            Plotly.newPlot('session_comparison', data3, layout3);
+        };
+    </script>
 </body>
 </html>

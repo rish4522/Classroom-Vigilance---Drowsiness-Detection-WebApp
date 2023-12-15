@@ -90,12 +90,24 @@ header a {
     text-transform: uppercase;
 }
 
+.subpart2 figure {
+    width: 600px;
+    margin: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .features figure figcaption {
     font-family: 'Helvetica', sans-serif;
     font-weight: bold;
 }
 
 .features figure img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.subpart2 figure img {
     border-radius: 10px;
     width: 100%;
 }
@@ -107,6 +119,7 @@ div.main {
 }
 
 .subpart1, .subpart2 {
+    display: inline;
     text-align: center;
     margin-bottom: 30px;
 }

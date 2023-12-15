@@ -15,7 +15,7 @@ def video_detection(path_x, app, mysql, session_data):
        frame_width = int(cap.get(3))
        frame_height = int(cap.get(4))
 
-       model = YOLO('D:/detectionProject/best.pt')
+       model = YOLO('D:/Projects/detectionProject/best.pt')
 
        classNames = ['sleeping']
        num_detections = 0

@@ -1,6 +1,6 @@
 <h1 align="center">~ Classroom Vigilance - Slumber Guard: Drowsiness Detection Web App ~</h1>
 <p align="center">
-  <img src="your-logo.png" alt="Slumber Guard Logo">
+  <img src="static/images/logo.png" alt="Slumber Guard Logo">
 </p>
 <h2 align="left">Overview</h2>
 <p>

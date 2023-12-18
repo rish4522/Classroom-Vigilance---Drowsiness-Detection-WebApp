@@ -19,10 +19,15 @@ app.secret_key = '@alienforce'
 app.config['UPLOAD_FOLDER'] = 'static/files'
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'rish'
-app.config['MYSQL_DB'] = 'detectiondbase'
+# app.config['MYSQL_HOST'] = 'localhost'
+# app.config['MYSQL_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = 'rish'
+# app.config['MYSQL_DB'] = 'detectiondbase'
+
+app.config['MYSQL_HOST'] = 'detectiondbase.cry4f3qhljwv.us-east-1.rds.amazonaws.com'
+app.config['MYSQL_USER'] = 'rishabh'
+app.config['MYSQL_PASSWORD'] = 'alienforce'
+app.config['MYSQL_DB'] = 'detectionDbase'
 
 # Create a MySQL instance
 mysql = MySQL(app)
